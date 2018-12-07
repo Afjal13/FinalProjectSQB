@@ -1,0 +1,18 @@
+﻿body {
+    background-image: url(../Images/HomePage-27.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*for image slides*/
+.carousel-div {
+    margin-top: 15px;
+}
+
+.slides-image {
+    width: 1000px;
+    margin-left: 80px;
+}
+
+#image-height {
+    height: 500px;
+}
