@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "ProfileView";
+    Layout = "~/Views/Shared/SubAdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            text-align: center;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Profile Information List</h2>
+    <table width="500" border="2" cellpadding="30" cellspacing="150" height="400">
+        
+            <tr>
+                <td>Title</td>
+                <td>Information</td>
+                <td>Editing</td>
+            </tr>
+        <tr>
+            <td>Name: </td>
+            <td>Afjal Hossain</td>
+            <td>@Html.ActionLink("Edit", "EditProfile")</td>
+        </tr>
+        <tr>
+            <td>Email: </td>
+            <td>afjal35-1510@diu.edu.bd</td>
+            <td>@Html.ActionLink("Edit", "EditProfile")</td>
+        </tr>
+        <tr>
+            <td>Mobile Number: </td>
+            <td>01736065416</td>
+            <td>@Html.ActionLink("Edit", "EditProfile")</td>
+        </tr>
+        <tr>
+            <td>Address: </td>
+            <td>Shukrabad, Dhaka 1205</td>
+            <td>@Html.ActionLink("Edit", "EditProfile")</td>
+        </tr>
+        <tr>
+            <td>Organization Name: </td>
+            <td>Daffodil International University</td>
+            <td>@Html.ActionLink("Edit", "EditProfile")</td>
+        </tr>
+        <tr>
+            <td>Admin Code: </td>
+            <td>emran12345687</td>
+            <td>@Html.ActionLink("Edit", "EditProfile")</td>
+        </tr>
+        <tr>
+            <td>Personal Code: </td>
+            <td>Afjal3215564</td>
+            <td>@Html.ActionLink("Edit", "EditProfile")</td>
+        </tr>
+        <tr>
+            <td>Exam Category: </td>
+            <td>HSC</td>
+            <td>@Html.ActionLink("Edit", "EditProfile")</td>
+        </tr>
+    </table>
+</body>
+</html>
+

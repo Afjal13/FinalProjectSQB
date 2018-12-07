@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/SubAdminLayout.cshtml";
+}
+
+<h2>Select Question Category:</h2>
+
+@using (@Html.BeginForm("Create", "SubAdminTraffic", FormMethod.Post))
+{
+    <div>
+        @Html.RadioButton("QuestionType", "MCQ") Multiple Choice Question<br />
+        @Html.RadioButton("QuestionType", "CQ") Creative Question
+
+    </div>
+    <input type="submit" value="Next" />
+}
+
+

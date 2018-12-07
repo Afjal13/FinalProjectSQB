@@ -1,0 +1,153 @@
+﻿@model SecureQuestionBankV0._1._3.Models.MCQRecord
+
+@{
+    ViewBag.Title = "MCQ";
+    Layout = "~/Views/Shared/SubAdminLayout.cshtml";
+}
+
+<h2>MCQ</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>MCQRecord</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SubjectCode, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.SubjectCode, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.SubjectCode, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.QuestionCode, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.QuestionCode, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.QuestionCode, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model =>model.YaerType, htmlAttributes:
+                       new {
+                              @class = "control-label col-md-2"
+                          })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model =>model.YaerType, htmlAttributes:
+                          new {
+                                @class = "form-control"
+                              })
+            @Html.ValidationMessageFor(model =>model.YaerType, "",
+                          new {
+                                @class = "text-danger"
+                              })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model =>model.GetQuestionType, htmlAttributes:
+                       new {
+                              @class = "control-label col-md-2"
+                          })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model =>model.GetQuestionType, htmlAttributes:
+                          new {
+                                @class = "form-control"
+                              })
+            @Html.ValidationMessageFor(model =>model.GetQuestionType, "",
+                          new {
+                                @class = "text-danger"
+                              })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model =>model.OptionNumber, htmlAttributes:
+                       new {
+                              @class = "control-label col-md-2"
+                          })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model =>model.OptionNumber, htmlAttributes:
+                          new {
+                                @class = "form-control"
+                              })
+            @Html.ValidationMessageFor(model =>model.OptionNumber, "",
+                          new {
+                                @class = "text-danger"
+                              })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model =>model.RequireSetNumber, htmlAttributes:
+                       new {
+                              @class = "control-label col-md-2"
+                          })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model =>model.RequireSetNumber, htmlAttributes:
+                          new {
+                                @class = "form-control"
+                              })
+            @Html.ValidationMessageFor(model =>model.RequireSetNumber, "",
+                          new {
+                                @class = "text-danger"
+                              })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model =>model.RequireSetType, htmlAttributes:
+                       new {
+                              @class = "control-label col-md-2"
+                          })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model =>model.RequireSetType, htmlAttributes:
+                          new {
+                                @class = "form-control"
+                              })
+            @Html.ValidationMessageFor(model =>model.RequireSetType, "",
+                          new {
+                                @class = "text-danger"
+                              })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.QuestionQuantity, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.QuestionQuantity, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.QuestionQuantity, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SetTime, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.SetTime, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.SetTime, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="OK" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
