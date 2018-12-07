@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Select Your Option: </h2>
+@using (@Html.BeginForm("Register", "Home", FormMethod.Post))
+{
+    <div>
+        @Html.RadioButton("AdminType", "Super_Admin") Super_Admin<br />
+        @Html.RadioButton("AdminType", "Admin") Admin<br />
+        @Html.RadioButton("AdminType", "Sub_Admin") Sub_Admin<br />
+        @Html.RadioButton("AdminType", "Centre_Admin") Centre_Admin
+    </div>
+    <input type="submit" value="OK" />
+}
