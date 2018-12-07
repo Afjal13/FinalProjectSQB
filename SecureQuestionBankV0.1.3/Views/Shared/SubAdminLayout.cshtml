@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Secure Question Bank application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Secure Question Bank", "index", "SubAdminTraffic", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        @Html.ActionLink("Profile", "index", "SubAdminTraffic")
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setting</a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("View", "ProfileView", "SubAdminTraffic")</li>
+                            <li>@Html.ActionLink("Edit", "index", "SubAdminTraffic")</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Message</a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Admin message", "index", "SubAdminTraffic")</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Key</a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Encrypt", "index", "SubAdminTraffic")</li>
+                            <li>@Html.ActionLink("Decrypt", "index", "SubAdminTraffic")</li>
+                            <li>@Html.ActionLink("View Key", "index", "SubAdminTraffic")</li>
+                            <li>@Html.ActionLink("Incoming Key", "index", "SubAdminTraffic")</li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Question</a>
+                        <ul class="dropdown-menu">
+                            <!--<li> <a href="#">Create</a>
+                               <ul class="dropdown-menu">
+                                  <li>@Html.ActionLink("MCQ", "index", "SubAdminTraffic")</li>
+                                  <li>@Html.ActionLink("CQ", "index", "SubAdminTraffic")</li>
+
+                              </ul>
+                            </li>-->
+                            <li>@Html.ActionLink("Create", "Create", "SubAdminTraffic")</li>
+
+
+                            <li>@Html.ActionLink("Update", "Update", "SubAdminTraffic")</li>
+                            <li>@Html.ActionLink("Delete", "index", "SubAdminTraffic")</li>
+                            <li>@Html.ActionLink("Upload", "Upload", "SubAdminTraffic")</li>
+                            <li>@Html.ActionLink("View", "qsnView", "SubAdminTraffic")</li>
+                            <li>@Html.ActionLink("Send", "Send", "SubAdminTraffic")</li>
+                        </ul>
+                    </li>
+
+
+
+                    <li>@Html.ActionLink("Logout", "index", "AdminTraffic")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Secure Question Bank Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

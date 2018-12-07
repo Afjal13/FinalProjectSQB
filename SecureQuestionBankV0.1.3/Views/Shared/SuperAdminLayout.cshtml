@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Secure Question Bank", "TopNav", "SuperAdminTraffic", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        @Html.ActionLink("Profile", "TopNav", "SuperAdminTraffic")
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Setting</a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("View", "TopNav", "SuperAdminTraffic")</li>
+                            <li>@Html.ActionLink("Edit", "TopNav", "SuperAdminTraffic")</li>
+                            <li>@Html.ActionLink("Request", "TopNav", "SuperAdminTraffic")</li>
+                            <li>@Html.ActionLink("Block", "TopNav", "SuperAdminTraffic")</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Message</a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Centre Admin message", "TopNav", "SuperAdminTraffic")</li>
+                            <li>@Html.ActionLink("Admin Message", "TopNav", "SuperAdminTraffic")</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Key</a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Encrypt", "TopNav", "SuperAdminTraffic")</li>
+                            <li>@Html.ActionLink("Decrypt", "TopNav", "SuperAdminTraffic")</li>
+                            <li>@Html.ActionLink("View Key", "TopNav", "SuperAdminTraffic")</li>
+                            <li>@Html.ActionLink("Incoming Key", "TopNav", "SuperAdminTraffic")</li>
+                            <li>@Html.ActionLink("Send Key", "TopNav", "SuperAdminTraffic")</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Question</a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Sender Question ", "TopNav", "SuperAdminTraffic")</li>
+                            <li>@Html.ActionLink("View Receive Question", "TopNav", "SuperAdminTraffic")</li>
+                            <li>@Html.ActionLink("Make Question", "TopNav", "SuperAdminTraffic")</li>
+                            <li>@Html.ActionLink("Update Question", "TopNav", "SuperAdminTraffic")</li>
+                            <li>@Html.ActionLink("Delete Question", "TopNav", "SuperAdminTraffic")</li>
+                            <li>@Html.ActionLink("Send To", "TopNav", "SuperAdminTraffic")</li>
+                        </ul>
+                    </li>
+
+                    <li>@Html.ActionLink("Logout", "TopNav", "SuperAdminTraffic")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Secure Question Bank Application</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>
